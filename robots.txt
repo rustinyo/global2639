@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://globalpixel.online/sitemap.xml
+
+# Crawl-delay (optional, helps server load)
+Crawl-delay: 1
