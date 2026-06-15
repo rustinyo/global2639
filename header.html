@@ -1,0 +1,52 @@
+<!-- HEADER -->
+<header>
+  <a href="index.html" class="logo">
+    <div class="logo-mark">
+      <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <clipPath id="globe-clip">
+            <circle cx="16" cy="16" r="13"/>
+          </clipPath>
+          <radialGradient id="globe-grad" cx="38%" cy="35%" r="65%">
+            <stop offset="0%" stop-color="#60a5fa"/>
+            <stop offset="100%" stop-color="#1d4ed8"/>
+          </radialGradient>
+        </defs>
+        <circle cx="16" cy="16" r="13" fill="url(#globe-grad)"/>
+        <g class="globe-lines" clip-path="url(#globe-clip)">
+          <ellipse cx="16" cy="16" rx="13" ry="5"  fill="none" stroke="rgba(255,255,255,0.35)" stroke-width="0.9"/>
+          <ellipse cx="16" cy="16" rx="13" ry="9"  fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="0.9"/>
+          <ellipse cx="16" cy="16" rx="5"  ry="13" fill="none" stroke="rgba(255,255,255,0.4)"  stroke-width="0.9"/>
+          <ellipse cx="16" cy="16" rx="9"  ry="13" fill="none" stroke="rgba(255,255,255,0.28)" stroke-width="0.9"/>
+          <ellipse cx="16" cy="16" rx="13" ry="13" fill="none" stroke="rgba(255,255,255,0.22)" stroke-width="0.9"/>
+        </g>
+        <line x1="3" y1="16" x2="29" y2="16" stroke="rgba(255,255,255,0.3)" stroke-width="0.9" clip-path="url(#globe-clip)"/>
+        <circle cx="16" cy="16" r="13" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+        <ellipse cx="12" cy="11" rx="4" ry="2.5" fill="rgba(255,255,255,0.18)" transform="rotate(-20,12,11)"/>
+      </svg>
+    </div>
+    Global<span>Pixel</span>
+  </a>
+
+  <div class="header-right">
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="index.html#tools">Tools</a>
+      <a href="about.html" class="__ABOUT__">About</a>
+      <a href="contact.html" class="__CONTACT__">Contact</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Menu" onclick="toggleMobileNav()">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- MOBILE NAV -->
+<nav class="mobile-nav" id="mobileNav">
+  <a href="index.html" onclick="closeMobileNav()">Home</a>
+  <a href="index.html#tools" onclick="closeMobileNav()">Tools</a>
+  <a href="about.html" onclick="closeMobileNav()" class="__ABOUT__">About Us</a>
+  <a href="contact.html" onclick="closeMobileNav()" class="__CONTACT__">Contact</a>
+  <a href="privacy-policy.html" onclick="closeMobileNav()" class="__PRIVACY__">Privacy Policy</a>
+  <a href="terms.html" onclick="closeMobileNav()" class="__TERMS__">Terms of Use</a>
+</nav>
