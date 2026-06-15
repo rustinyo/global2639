@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us – GlobalPixel</title>
+<meta name="description" content="Learn about GlobalPixel, the free online image editor that runs entirely in your browser. No uploads, no registration, no cost.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://globalpixel.app/about.html">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%232563eb'/%3E%3Ctext x='16' y='23' text-anchor='middle' font-size='20' font-weight='900' fill='white' font-family='Arial'%3EG%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #ffffff; --surface: #f7f8fc; --card: #ffffff;
+    --border: #e4e7ef; --border-hover: #c5cce0;
+    --accent: #2563eb; --accent-light: #eff6ff; --accent-hover: #1d4ed8;
+    --text: #111827; --muted: #6b7280; --muted2: #9ca3af;
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+    --shadow-md: 0 4px 16px rgba(0,0,0,0.08);
+    --radius-sm: 8px; --radius: 12px; --radius-lg: 16px; --radius-xl: 24px;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; -webkit-font-smoothing: antialiased; }
+
+  /* HEADER */
+  header {
+    position: sticky; top: 0; z-index: 200;
+    background: rgba(255,255,255,0.95); backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--border);
+    padding: 0 1.5rem; height: 60px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .logo {
+    display: flex; align-items: center; gap: 0.625rem;
+    text-decoration: none;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 800; font-size: 1.25rem; color: var(--text); letter-spacing: -0.03em;
+  }
+  .logo span { color: var(--accent); }
+  nav { display: flex; gap: 0.125rem; }
+  nav a {
+    font-size: 0.85rem; font-weight: 500; color: var(--muted);
+    text-decoration: none; padding: 0.4rem 0.75rem;
+    border-radius: var(--radius-sm); transition: all 0.15s;
+  }
+  nav a:hover { color: var(--text); background: var(--surface); }
+  .btn-primary {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    background: var(--accent); color: #fff;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 600; font-size: 0.9rem;
+    padding: 0.6rem 1.25rem; border: none;
+    border-radius: var(--radius); cursor: pointer; transition: all 0.2s;
+    text-decoration: none; box-shadow: 0 2px 8px rgba(37,99,235,0.3);
+  }
+  .btn-primary:hover { background: var(--accent-hover); transform: translateY(-1px); }
+
+  /* PAGE HERO */
+  .page-hero {
+    background: linear-gradient(180deg, #f0f5ff 0%, #ffffff 100%);
+    border-bottom: 1px solid var(--border);
+    padding: 4rem 1.5rem 3.5rem;
+    text-align: center;
+  }
+  .breadcrumb {
+    display: flex; align-items: center; justify-content: center; gap: 0.5rem;
+    font-size: 0.8rem; color: var(--muted); margin-bottom: 1.5rem;
+  }
+  .breadcrumb a { color: var(--accent); text-decoration: none; font-weight: 500; }
+  .breadcrumb a:hover { text-decoration: underline; }
+  .breadcrumb svg { width: 12px; height: 12px; opacity: 0.5; }
+
+  .page-hero h1 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: clamp(1.9rem, 4vw, 2.8rem);
+    font-weight: 800; letter-spacing: -0.03em; color: var(--text);
+    margin-bottom: 1rem;
+  }
+  .page-hero h1 em { font-style: normal; color: var(--accent); }
+  .page-hero p { color: var(--muted); font-size: 1.05rem; max-width: 520px; margin: 0 auto; line-height: 1.75; }
+
+  /* CONTENT */
+  .content-wrap { max-width: 780px; margin: 0 auto; padding: 4rem 1.5rem 5rem; }
+
+  .section-block { margin-bottom: 3rem; }
+  .section-block h2 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 1.35rem; font-weight: 800; color: var(--text);
+    letter-spacing: -0.02em; margin-bottom: 1rem;
+  }
+  .section-block p { color: var(--muted); line-height: 1.8; font-size: 0.97rem; margin-bottom: 0.875rem; }
+  .section-block p:last-child { margin-bottom: 0; }
+
+  /* VALUES GRID */
+  .values-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem; margin-top: 1.5rem;
+  }
+  .value-card {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: var(--radius-lg); padding: 1.5rem;
+    box-shadow: var(--shadow-sm);
+  }
+  .value-icon { font-size: 1.75rem; margin-bottom: 0.75rem; }
+  .value-card h3 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.95rem; font-weight: 700; color: var(--text); margin-bottom: 0.375rem;
+  }
+  .value-card p { font-size: 0.82rem; color: var(--muted); line-height: 1.6; }
+
+  /* DIVIDER */
+  .divider { border: none; border-top: 1px solid var(--border); margin: 3rem 0; }
+
+  /* CTA BAND */
+  .cta-band {
+    background: var(--accent-light); border: 1px solid #bfdbfe;
+    border-radius: var(--radius-xl); padding: 2.5rem 2rem;
+    text-align: center; margin-top: 3rem;
+  }
+  .cta-band h2 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 1.35rem; font-weight: 800; color: var(--text);
+    margin-bottom: 0.75rem; letter-spacing: -0.02em;
+  }
+  .cta-band p { color: var(--muted); font-size: 0.92rem; margin-bottom: 1.5rem; line-height: 1.7; }
+
+  /* FOOTER */
+  footer { border-top: 1px solid var(--border); padding: 2.5rem 1.5rem 2rem; background: var(--surface); }
+  .footer-inner { max-width: 900px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: 1.25rem; }
+  .footer-logo {
+    display: flex; align-items: center; gap: 0.5rem;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 800; font-size: 1.1rem; color: var(--text); text-decoration: none;
+  }
+  .footer-logo span { color: var(--accent); }
+  .footer-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.25rem; }
+  .footer-links a {
+    font-size: 0.83rem; color: var(--muted); text-decoration: none;
+    padding: 0.35rem 0.75rem; border-radius: var(--radius-sm);
+    transition: all 0.15s; font-weight: 500;
+  }
+  .footer-links a:hover { color: var(--text); background: var(--border); }
+  .footer-copy { font-size: 0.78rem; color: var(--muted2); text-align: center; }
+
+  @media (max-width: 600px) {
+    .page-hero { padding: 3rem 1.25rem 2.5rem; }
+    nav { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <a href="/" class="logo">Global<span>Pixel</span></a>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/#tools">Tools</a>
+    <a href="/#faq">FAQ</a>
+  </nav>
+  <a href="/" class="btn-primary">🖼️ Open Editor</a>
+</header>
+
+<section class="page-hero">
+  <div class="breadcrumb">
+    <a href="/">GlobalPixel</a>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+    <span>About Us</span>
+  </div>
+  <h1>Built for <em>everyone</em> who edits images</h1>
+  <p>GlobalPixel is a free, privacy-first image editor that runs entirely inside your browser — no accounts, no uploads, no cost.</p>
+</section>
+
+<div class="content-wrap">
+
+  <div class="section-block">
+    <h2>Our Mission</h2>
+    <p>We believe powerful image editing tools should be accessible to everyone — designers, students, bloggers, small business owners, and everyday users alike. GlobalPixel was built to remove the barriers: no software to install, no account to create, no subscription to pay.</p>
+    <p>Everything happens locally in your browser using the HTML5 Canvas API. Your images are never sent to any server, never stored, and never seen by anyone but you.</p>
+  </div>
+
+  <div class="section-block">
+    <h2>What We Stand For</h2>
+    <div class="values-grid">
+      <div class="value-card">
+        <div class="value-icon">🔒</div>
+        <h3>Privacy First</h3>
+        <p>Your images never leave your device. All processing happens 100% in your browser.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">🆓</div>
+        <h3>Always Free</h3>
+        <p>No premium tiers, no hidden fees, no watermarks — now or ever.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">⚡</div>
+        <h3>Instant Results</h3>
+        <p>No waiting for uploads or server processing. Edits happen in real time.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">📱</div>
+        <h3>Works Everywhere</h3>
+        <p>Fully responsive on desktop, tablet, and mobile — any modern browser.</p>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <div class="section-block">
+    <h2>The Technology Behind GlobalPixel</h2>
+    <p>GlobalPixel uses the browser's native Canvas API to perform all image operations — cropping, resizing, rotating, compressing, converting, and applying filters — without any server-side processing. This means your data stays private and results are instant.</p>
+    <p>We support input formats including JPG, PNG, WEBP, GIF, BMP, and TIFF, and can export to JPG, PNG, and WEBP at your chosen quality level.</p>
+  </div>
+
+  <div class="section-block">
+    <h2>Our Commitment to You</h2>
+    <p>GlobalPixel will always be free. We are committed to keeping this tool open and accessible without paywalls or feature restrictions. Our goal is simple: give you a fast, reliable, and private image editor you can count on.</p>
+    <p>Have feedback or a feature request? We'd love to hear from you — reach out via our <a href="/contact.html" style="color:var(--accent);font-weight:500;">Contact page</a>.</p>
+  </div>
+
+  <div class="cta-band">
+    <h2>Ready to edit your image?</h2>
+    <p>No sign-up needed. Just open the editor and start creating in seconds.</p>
+    <a href="/" class="btn-primary">🖼️ Open Free Editor</a>
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <a href="/" class="footer-logo">Global<span>Pixel</span></a>
+    <div class="footer-links">
+      <a href="/about.html">About Us</a>
+      <a href="/#faq">FAQ</a>
+      <a href="/privacy.html">Privacy</a>
+      <a href="/terms.html">Terms of Use</a>
+      <a href="/contact.html">Contact</a>
+    </div>
+    <p class="footer-copy">© 2025 GlobalPixel – All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>
